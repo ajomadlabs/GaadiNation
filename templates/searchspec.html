@@ -53,11 +53,11 @@
             <div class="col s5 m6">
                 <div class="card small z-depth-0">
                     <div class="card-image" style="max-height:500px;max-width: 500px;">
-                        <img src="../static/images/carfind3.jpg">
+                        <img class="materialboxed" src="../static/images/cardfind3.jpg">
                     </div>
                 </div>
             </div>
-            <div class="col s2 m3" style="margin-top:4%;margin-left:0%;">
+            <div class="col s2 m3" style="margin-top:6%;margin-left:0%;">
                 <div class="card z-depth-0">
                     <table class="highlight responsive-table" style="margin-right:">
                         <tbody>
@@ -77,7 +77,7 @@
         </div>
         <!-- End Of Short Specification-->
         <!-- Extra Specifications -->
-        <div class="row">
+        <div class="row" style="margin-top:10%">
             <div class="center-align">
                <h5 style="font-family:Alegreya Sans SC;font-size:40px;">Detailed Specifications</h5>
             </div>
@@ -127,6 +127,10 @@
             $(document).ready(function(){
                 // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
                 $('.modal-trigger').leanModal();
+            });
+               
+            $(document).ready(function(){
+                $('.materialboxed').materialbox();
             });
                
            </script>
