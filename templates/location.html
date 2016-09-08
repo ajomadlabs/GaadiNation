@@ -6,7 +6,7 @@
             
             <!-- Font Styles -->
             <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Aladin|Alegreya+Sans+SC:100|Advent+Pro" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100|Raleway" rel="stylesheet">
             
             <!-- Compiled and minified CSS -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
@@ -30,11 +30,11 @@
         <div>
             <nav>
                 <div class="navbar-fixed blue-grey darken-3">
-                    <a href="" class="brand-logo center" style="font-family:Alegreya Sans SC;font-size:58px;">Gaadi<span style="color:#43C6DB";>Nation</span></a>
+                    <a href="home" class="brand-logo center" style="font-family:Alegreya Sans SC;font-size:58px;">Gaadi<span style="color:#43C6DB";>Nation</span></a>
                         <ul id="nav-mobile"  class="left hide-on-med-and-down">
-                            <li style="font-family:Raleway;font-size:50px;"><b><a href="">FIND</a></b></li>
+                            <li style="font-family:Raleway;font-size:50px;"><b><a href="findresult.html">FIND</a></b></li>
                             <li style="font-family:Raleway;font-size:50px;"><b><a href="">COMPARE</a></b></li>
-                            <li style="font-family:Raleway;font-size:50px;"><b><a href="">LOCATE</a></b></li>
+                            <li style="font-family:Raleway;font-size:50px;"><b><a href="location.html">LOCATE</a></b></li>
                         </ul>
                 </div>
             </nav>
@@ -52,20 +52,8 @@
             <div class="col s10 m3" style="margin-top: 1%;">
                 <div class=" card white">
                     <div class="card-content black-text">
-                              <a class='dropdown-button btn blue-grey darken-3 z-depth-2' href='#' data-activates='dropdown1' style="margin-left: 11%;">Choose Your Brand</a>
-                              <a class='dropdown-button btn blue-grey darken-3 z-depth-2' href='#' data-activates='dropdown2' style="margin-top: 8%;margin-left: 8%;">Choose Your Location</a>
-                                <!-- Dropdown Structure -->
-                                <ul id='dropdown1' class='dropdown-content' style="margin-left: 10%;">
-                                    <li><a href="#!">Aston Martin</a></li>
-                                    <li><a href="#!">Audi</a></li>
-                                    <li><a href="#!">BMW</a></li>
-                                </ul>
-                                <!-- Dropdown Structure -->
-                                <ul id='dropdown2' class='dropdown-content' style="margin-left: 7%;">
-                                    <li><a href="#!">one</a></li>
-                                    <li><a href="#!">two</a></li>
-                                    <li><a href="#!">three</a></li>
-                                </ul>
+                                <input type="text" id="autocomplete-input" class="autocomplete" placeholder="Type Your Location">
+                                <label for="autocomplete-input"></label>
                     </div>
                 </div>
             </div>
@@ -130,6 +118,17 @@
                 }
             );
             });
+               
+            $(document).ready(function(){   
+                $('input.autocomplete').autocomplete({
+                    data: {
+                            "Kerala": null,
+                            "Delhi": null,
+                            "Mumbai": 'http://placehold.it/250x250'
+                    }
+                });
+            });
+        
            </script>
     </body>
 </html>
